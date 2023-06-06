@@ -18,8 +18,9 @@ const App = () => {
           type='text'
           id='name'
           className='form-border'
-          {...register('name')}
+          {...register('name', { required: 'Name is required.' })}
         />
+        <p className='text-red-500'>{errors.name?.message}</p>
 
         <label htmlFor='email'>Email</label>
         <input
