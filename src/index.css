@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .form-border {
+    @apply block border border-solid rounded border-gray-300 p-1;
+  }
+}
