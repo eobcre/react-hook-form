@@ -27,16 +27,18 @@ const App = () => {
           type='email'
           id='email'
           className='form-border'
-          {...register('email')}
+          {...register('email', { required: 'Email is required.' })}
         />
+        <p className='text-red-500'>{errors.email?.message}</p>
 
         <label htmlFor='password'>Password</label>
         <input
           type='password'
           id='password'
           className='form-border'
-          {...register('password')}
+          {...register('password', { required: 'Password is required.' })}
         />
+        <p className='text-red-500'>{errors.password?.message}</p>
 
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
           Login
