@@ -4,6 +4,6 @@
 
 @layer components {
   .form-border {
-    @apply block border border-solid rounded border-gray-300 p-1;
+    @apply block border border-solid rounded border-gray-300 p-1 mb-4 w-72;
   }
 }
