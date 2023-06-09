@@ -11,7 +11,7 @@ const App = () => {
     console.log(data);
   };
   return (
-    <div className='h-screen flex justify-center items-center'>
+    <div className='flex justify-center items-center h-screen'>
       <form onSubmit={handleSubmit(onSubmit)}>
         <p className='text-3xl flex justify-center p-3'>Login Form</p>
 
