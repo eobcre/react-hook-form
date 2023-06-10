@@ -23,7 +23,7 @@ const App = () => {
             required: '* Name is required.',
             minLength: {
               value: 4,
-              message: '* Letters must contain 4 or more characters.',
+              message: '* Must contain 4 or more characters.',
             },
           })}
         />
@@ -47,7 +47,7 @@ const App = () => {
             required: '* Password is required.',
             minLength: {
               value: 8,
-              message: '* Password must contain 8 or more characters.',
+              message: '* Must contain 8 or more characters.',
             },
           })}
         />
