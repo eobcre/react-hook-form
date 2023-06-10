@@ -5,7 +5,7 @@ const App = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ mode: 'onChange' });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -19,7 +19,13 @@ const App = () => {
           type='text'
           id='name'
           className='form-border'
-          {...register('name', { required: '* Name is required.' })}
+          {...register('name', {
+            required: '* Name is required.',
+            minLength: {
+              value: 4,
+              message: '* Letters must contain 4 or more characters.',
+            },
+          })}
         />
         <p className='text-red-500 mb-3'>{errors.name?.message}</p>
 
@@ -37,7 +43,13 @@ const App = () => {
           type='password'
           id='password'
           className='form-border'
-          {...register('password', { required: '* Password is required.' })}
+          {...register('password', {
+            required: '* Password is required.',
+            minLength: {
+              value: 8,
+              message: '* Password must contain 8 or more characters.',
+            },
+          })}
         />
         <p className='text-red-500 mb-4'>{errors.password?.message}</p>
 
