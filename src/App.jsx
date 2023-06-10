@@ -13,6 +13,7 @@ const App = () => {
   return (
     <div className='flex justify-center items-center h-screen'>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <p className='flex justify-center text-2xl p-2'>Login Form</p>
         <label htmlFor='name'>Name</label>
         <input
           type='text'
